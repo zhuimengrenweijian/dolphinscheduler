@@ -21,8 +21,9 @@ import ThemeState from './types'
 export const useThemeStore = defineStore({
   id: 'theme',
   state: (): ThemeState => ({
-    darkTheme: true,
+    darkTheme: false,
   }),
+  persist: true,
   getters: {
     getTheme(): boolean {
       return this.darkTheme
